@@ -10,9 +10,7 @@ If using on a RedHat/CentOS-based host, make sure you've added the EPEL reposito
 
 ## Role Variables
 
-Available variables are listed below, along with default values (see `defaults/main.yml`):
-
-    TODO
+None.
 
 ## Dependencies
 
