@@ -6,7 +6,7 @@
 
 # Debian installation.
 - name: Add rquillo repository (Debian).
-  apt_repository: repo='ppa:rquillo/ansible'
+  apt_repository: repo='ppa:ansible/ansible'
   when: ansible_os_family == 'Debian'
 
 - name: Update apt cache (Debian).
