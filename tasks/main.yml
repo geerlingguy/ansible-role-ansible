@@ -1,18 +1,7 @@
 ---
-# RedHat installation.
-- name: Install Ansible (RedHat).
-  yum: pkg=ansible state=installed enablerepo=epel
+# Setup/install tasks.
+- include: setup-RedHat.yml
   when: ansible_os_family == 'RedHat'
 
-# Debian installation.
-- name: Add rquillo repository (Debian).
-  apt_repository: repo='ppa:ansible/ansible'
-  when: ansible_os_family == 'Debian'
-
-- name: Update apt cache (Debian).
-  apt: update_cache=yes cache_valid_time=86400
-  when: ansible_os_family == 'Debian'
-
-- name: Install Ansible (Debian).
-  apt: pkg=ansible state=installed
+- include: setup-Debian.yml
   when: ansible_os_family == 'Debian'
