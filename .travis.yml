@@ -33,3 +33,6 @@ script:
   # Make sure Ansible is installed (yes, this is contrived, since Ansible was
   # already installed via pip earlier...).
   - "which ansible"
+
+notifications:
+  webhooks: https://galaxy.ansible.com/api/v1/notifications/
