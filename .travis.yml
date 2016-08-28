@@ -51,7 +51,7 @@ script:
     || (echo 'Idempotence test: fail' && exit 1)
 
   # Ensure Ansible is installed (contrived... since it's already installed).
-  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm which ansible'
+  - 'sudo docker exec --tty "$(cat ${container_id})" env TERM=xterm ansible --version'
 
   # Clean up.
   - 'sudo docker stop "$(cat ${container_id})"'
