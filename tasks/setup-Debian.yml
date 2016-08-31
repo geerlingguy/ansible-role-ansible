@@ -1,9 +1,15 @@
 ---
-- name: Enable Backports repository
-  apt_repository: repo='deb http://ftp.debian.org/debian {{ansible_distribution_release}}-backports main' state=present filename={{ansible_distribution_release}}_backports
+- name: Enable Backports repository.
+  apt_repository:
+    repo: 'deb http://ftp.debian.org/debian {{ ansible_distribution_release }}-backports main'
+    state: present
+    filename: "{{ ansible_distribution_release }}_backports"
 
 - name: Update apt cache.
   apt: update_cache=yes cache_valid_time=86400
 
 - name: Install Ansible.
-  apt: name=ansible state=installed default_release={{ansible_distribution_release}}-backports
+  apt:
+    name: ansible
+    state: installed
+    default_release: "{{ ansible_distribution_release }}-backports"
