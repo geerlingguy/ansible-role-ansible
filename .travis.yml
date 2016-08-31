@@ -22,6 +22,10 @@ env:
     version: latest
     init: /sbin/init
     run_opts: ""
+  - repository: geerlingguy/docker-debian8-ansible
+    version: latest
+    init: /lib/systemd/systemd
+    run_opts: "--privileged --volume=/sys/fs/cgroup:/sys/fs/cgroup:ro"
 
 services:
   - docker
