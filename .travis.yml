@@ -11,14 +11,16 @@ env:
   - distro: debian8
 
 script:
-  - container_id=$(date +%s)
+  # Configure test script so we can run extra tests after playbook is run.
+  - export container_id=$(date +%s)
+  - export cleanup=false
 
   # Download test shim.
   - wget -O ${PWD}/tests/test.sh https://gist.githubusercontent.com/geerlingguy/73ef1e5ee45d8694570f334be385e181/raw/
   - chmod +x ${PWD}/tests/test.sh
 
   # Run tests.
-  - cleanup=false ${PWD}/tests/test.sh
+  - ${PWD}/tests/test.sh
 
   # Ensure Ansible is installed (contrived... since it's already installed).
   - 'docker exec --tty ${container_id} env TERM=xterm ansible --version'
