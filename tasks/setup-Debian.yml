@@ -11,5 +11,5 @@
 - name: Install Ansible.
   apt:
     name: ansible
-    state: installed
+    state: present
     default_release: "{{ ansible_distribution_release }}-backports"
