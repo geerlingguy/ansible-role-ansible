@@ -6,7 +6,7 @@ galaxy_info:
   description: Ansible for RedHat/CentOS/Debian/Ubuntu.
   company: "Midwestern Mac, LLC"
   license: "license (BSD, MIT)"
-  min_ansible_version: 2.0
+  min_ansible_version: 2.4
   platforms:
   - name: EL
     versions:
@@ -26,3 +26,5 @@ galaxy_info:
     - packaging
     - development
     - cloud
+    - ansible
+    - automation

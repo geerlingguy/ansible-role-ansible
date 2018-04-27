@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/geerlingguy/ansible-role-ansible.svg?branch=master)](https://travis-ci.org/geerlingguy/ansible-role-ansible)
 
-An Ansible Role that installs Ansible on RHEL/CentOS and Debian/Ubuntu.
+An Ansible Role that installs Ansible on Linux servers.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ None.
 
     - hosts: servers
       roles:
-        - { role: geerlingguy.ansible }
+        - role: geerlingguy.ansible
 
 ## License
 

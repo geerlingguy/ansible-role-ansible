@@ -1,13 +1,13 @@
 ---
 # Setup/install tasks.
-- include: setup-RedHat.yml
+- include_tasks: setup-RedHat.yml
   when: ansible_os_family == 'RedHat' and ansible_distribution != 'Fedora'
 
-- include: setup-Fedora.yml
+- include_tasks: setup-Fedora.yml
   when: ansible_distribution == 'Fedora'
 
-- include: setup-Ubuntu.yml
+- include_tasks: setup-Ubuntu.yml
   when: ansible_distribution == 'Ubuntu'
 
-- include: setup-Debian.yml
+- include_tasks: setup-Debian.yml
   when: ansible_distribution == 'Debian'
