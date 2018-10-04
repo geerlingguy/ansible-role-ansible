@@ -1,2 +1,8 @@
 ---
 ansible_default_release: ""
+
+# Valid options include: 'package' or 'pip'.
+ansible_install_method: package
+
+# Used only if ansible_install_method is 'pip'. If empty, defaults to latest.
+ansible_install_version_pip: ''

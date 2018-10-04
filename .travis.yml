@@ -12,6 +12,11 @@ env:
     - MOLECULE_DISTRO: debian9
     - MOLECULE_DISTRO: debian8
 
+    - MOLECULE_DISTRO: centos7
+      MOLECULE_PLAYBOOK: playbook-pip.yml
+    - MOLECULE_DISTRO: ubuntu1804
+      MOLECULE_PLAYBOOK: playbook-pip.yml
+
 install:
   # Install test dependencies.
   - pip install molecule docker
