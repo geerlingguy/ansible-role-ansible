@@ -1,3 +1,6 @@
 ---
 - name: Install Ansible.
-  yum: name=ansible state=present enablerepo=epel
+  yum:
+    name: ansible
+    state: "{{ ansible_package_state }}"
+    enablerepo: epel

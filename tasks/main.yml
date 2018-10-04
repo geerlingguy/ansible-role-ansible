@@ -1,26 +1,27 @@
 ---
+- name: Set the package state based on how Ansible is installed.
+  set_fact:
+    ansible_package_state: "{{ 'present' if ansible_install_method == 'package' else 'absent' }}"
+
 # Setup/install tasks.
-- include_tasks: setup-RedHat.yml
+- name: Set up Ansible on RedHat.
+  include_tasks: setup-RedHat.yml
   when:
-    - ansible_install_method == 'package'
     - ansible_os_family == 'RedHat'
     - ansible_distribution != 'Fedora'
 
-- include_tasks: setup-Fedora.yml
-  when:
-    - ansible_install_method == 'package'
-    - ansible_distribution == 'Fedora'
+- name: Set up Ansible on Fedora.
+  include_tasks: setup-Fedora.yml
+  when: ansible_distribution == 'Fedora'
 
-- include_tasks: setup-Ubuntu.yml
-  when:
-    - ansible_install_method == 'package'
-    - ansible_distribution == 'Ubuntu'
+- name: Set up Ansible on Ubuntu.
+  include_tasks: setup-Ubuntu.yml
+  when: ansible_distribution == 'Ubuntu'
 
-- include_tasks: setup-Debian.yml
-  when:
-    - ansible_install_method == 'package'
-    - ansible_distribution == 'Debian'
+- name: Set up Ansible on Debian.
+  include_tasks: setup-Debian.yml
+  when: ansible_distribution == 'Debian'
 
-- include_tasks: setup-pip.yml
-  when:
-    - ansible_install_method == 'pip'
+- name: Set up Ansible using Pip.
+  include_tasks: setup-pip.yml
+  when: ansible_install_method == 'pip'

@@ -1,0 +1,12 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+
+  vars:
+    ansible_install_method: pip
+    ansible_install_version_pip: "2.6.2"
+
+  roles:
+    - role: geerlingguy.pip
+    - role: geerlingguy.ansible
