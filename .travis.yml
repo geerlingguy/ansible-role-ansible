@@ -7,7 +7,7 @@ env:
     - ROLE_NAME: ansible
   matrix:
     - MOLECULE_DISTRO: centos7
-    - MOLECULE_DISTRO: fedora27
+    - MOLECULE_DISTRO: fedora29
     - MOLECULE_DISTRO: ubuntu1804
     - MOLECULE_DISTRO: debian9
     - MOLECULE_DISTRO: debian8
