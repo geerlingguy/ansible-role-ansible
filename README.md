@@ -39,7 +39,7 @@ Install from pip:
         ansible_install_method: pip
         ansible_install_version_pip: "2.7.0"
       roles:
-        - role: geerlinguy.pip
+        - role: geerlingguy.pip
         - role: geerlingguy.ansible
 
 ## License
