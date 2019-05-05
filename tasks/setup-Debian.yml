@@ -6,7 +6,7 @@
       {{ ansible_distribution_release }}-backports main'
     state: present
     filename: "{{ ansible_distribution_release }}_backports"
-  when: ansible_distribution_version < 9
+  when: ansible_distribution_version | int < 9
 
 - name: Update apt cache.
   apt: update_cache=true cache_valid_time=86400
@@ -14,7 +14,7 @@
 - name: Set the default_release option for older Debian versions.
   set_fact:
     ansible_default_release: "{{ ansible_distribution_release }}-backports"
-  when: ansible_distribution_version < 9
+  when: ansible_distribution_version | int < 9
 
 - name: Install Ansible.
   apt:
