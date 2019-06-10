@@ -1,14 +1,15 @@
 ---
-- name: Enable Ansible PPA repo.
-  apt_repository: deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
-    state: present
-    filename: ansible-ppa
-    
 - name: Add the apt key.
   apt_key:
     keyserver: keyserver.ubuntu.com
     id: 93C4A3FD7BB9C367
     state: present
+
+- name: Enable Ansible PPA repo.
+  apt_repository:
+    repo: deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main
+    state: present
+    filename: ansible-ppa
 
 - name: Update apt cache.
   apt: update_cache=true cache_valid_time=86400
