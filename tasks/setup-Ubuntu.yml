@@ -1,4 +1,9 @@
 ---
+- name: Ensure dirmngr is installed (gnupg dependency).
+  apt:
+    name: dirmngr
+    state: present
+
 - name: Add ansible repository.
   apt_repository: repo='ppa:ansible/ansible'
 
