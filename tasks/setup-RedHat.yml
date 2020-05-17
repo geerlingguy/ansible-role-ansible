@@ -1,6 +1,14 @@
 ---
-- name: Install Ansible.
+- name: Install Ansible CentOS 6 / 7.
   yum:
     name: ansible
     state: "{{ ansible_package_state }}"
     enablerepo: epel
+  when: ansible_distribution_major_version|int < 8
+
+- name: Install Ansible CentOS 8
+  dnf:
+    name: ansible
+    state: "{{ ansible_package_state }}"
+    enablerepo: epel
+  when: ansible_distribution_major_version|int == 8
