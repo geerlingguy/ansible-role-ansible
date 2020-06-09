@@ -6,11 +6,14 @@
 
 - name: Add ansible repository.
   apt_repository: repo='ppa:ansible/ansible'
+  when: ansible_install_method == 'package'
 
 - name: Update apt cache.
   apt: update_cache=true cache_valid_time=86400
+  when: ansible_install_method == 'package'
 
 - name: Install Ansible.
   apt:
     name: ansible
     state: "{{ ansible_package_state }}"
+  when: ansible_install_method == 'package'
