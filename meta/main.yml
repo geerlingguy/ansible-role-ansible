@@ -10,8 +10,7 @@ galaxy_info:
   platforms:
     - name: EL
       versions:
-        - 6
-        - 7
+        - all
     - name: Fedora
       versions:
         - all

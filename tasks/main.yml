@@ -9,18 +9,25 @@
   when:
     - ansible_os_family == 'RedHat'
     - ansible_distribution != 'Fedora'
+    - ansible_install_method == 'package'
 
 - name: Set up Ansible on Fedora.
   include_tasks: setup-Fedora.yml
-  when: ansible_distribution == 'Fedora'
+  when:
+    - ansible_distribution == 'Fedora'
+    - ansible_install_method == 'package'
 
 - name: Set up Ansible on Ubuntu.
   include_tasks: setup-Ubuntu.yml
-  when: ansible_distribution == 'Ubuntu'
+  when:
+    - ansible_distribution == 'Ubuntu'
+    - ansible_install_method == 'package'
 
 - name: Set up Ansible on Debian.
   include_tasks: setup-Debian.yml
-  when: ansible_distribution == 'Debian'
+  when:
+    - ansible_distribution == 'Debian'
+    - ansible_install_method == 'package'
 
 - name: Set up Ansible using Pip.
   include_tasks: setup-pip.yml
