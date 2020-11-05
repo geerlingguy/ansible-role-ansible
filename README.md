@@ -1,6 +1,6 @@
 # Ansible Role: Ansible
 
-[![Build Status](https://travis-ci.com/geerlingguy/ansible-role-ansible.svg?branch=master)](https://travis-ci.com/geerlingguy/ansible-role-ansible)
+[![CI](https://github.com/geerlingguy/ansible-role-ansible/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-ansible/actions?query=workflow%3ACI)
 
 An Ansible Role that installs Ansible on Linux servers.
 
