@@ -2,4 +2,5 @@
 - name: Install Ansible via Pip.
   pip:
     name: ansible
+    extra_args: "{{ ansible_pip_extra_args | default(omit) }}"
     version: "{{ ansible_install_version_pip | default(omit) }}"

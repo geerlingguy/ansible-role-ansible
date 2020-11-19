@@ -6,3 +6,6 @@ ansible_install_method: package
 
 # Used only if ansible_install_method is 'pip'. If empty, defaults to latest.
 ansible_install_version_pip: ''
+
+# Can be use to pass extra args to pip if needed 
+ansible_pip_extra_args: ''

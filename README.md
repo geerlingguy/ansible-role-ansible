@@ -20,6 +20,10 @@ Whether to install Ansible via the system `package` manager (`apt`, `yum`, `dnf`
 
 If `ansible_install_method` is set to `pip`, the specific Ansible version to be installed via Pip. If not set, the latest version of Ansible will be installed.
 
+    ansible_pip_extra_args: ''
+
+Using this variable you'll be able to any pass extra args to pip when installing Ansible
+
 ## Dependencies
 
 None.
