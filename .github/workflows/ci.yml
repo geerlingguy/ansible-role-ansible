@@ -43,7 +43,7 @@ jobs:
         include:
           - distro: centos8
             playbook: converge.yml
-          - distro: fedora32
+          - distro: fedora33
             playbook: converge.yml
           # See: https://github.com/geerlingguy/ansible-role-ansible/issues/18
           # - distro: ubuntu2004
