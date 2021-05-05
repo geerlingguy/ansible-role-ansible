@@ -6,7 +6,7 @@ An Ansible Role that installs Ansible on Linux servers.
 
 ## Requirements
 
-If using on a RedHat/CentOS-based host, make sure you've added the EPEL repository (it can easily be installed by including the `geerlingguy.repo-epel` role on Ansible Galaxy).
+If using on a RedHat/CentOS/Rocky Linux-based host, make sure you've added the EPEL repository (it can easily be installed by including the `geerlingguy.repo-epel` role on Ansible Galaxy).
 
 ## Role Variables
 
