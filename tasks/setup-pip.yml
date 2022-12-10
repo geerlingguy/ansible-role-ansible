@@ -3,3 +3,4 @@
   pip:
     name: ansible
     version: "{{ ansible_install_version_pip | default(omit) }}"
+    extra_args: "{{ ansible_install_pip_extra_args | default(omit) }}"

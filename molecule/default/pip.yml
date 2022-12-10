@@ -6,6 +6,7 @@
   vars:
     ansible_install_method: pip
     ansible_install_version_pip: "2.6.2"
+    ansible_install_pip_extra_args: "--user"
 
   roles:
     - role: geerlingguy.pip
