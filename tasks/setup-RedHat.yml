@@ -3,4 +3,4 @@
   package:
     name: ansible
     state: "{{ ansible_package_state }}"
-    enablerepo: epel
+    enablerepo: "{{ ansible_epel_name }}"
