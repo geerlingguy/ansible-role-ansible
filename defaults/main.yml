@@ -9,3 +9,9 @@ ansible_install_version_pip: ''
 
 # Which extra arguments should be gived to pip
 ansible_install_pip_extra_args: ''
+
+# path to pip executable to use
+ansible_pip_executable: ''
+
+# name of epel repo if it isn't standard
+ansible_epel_repo_name: 'epel'

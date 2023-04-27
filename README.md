@@ -24,6 +24,15 @@ If `ansible_install_method` is set to `pip`, the specific Ansible version to be 
 
 If `ansible_install_method` is set to `pip`, the extra arguments to be given to `pip` are listed here. If not set, no extra arguments are given.
 
+    ansible_pip_executable: ''
+
+if `ansible_install_method` is set to `pip`, this is the path to the pip executable, in case your platform doesn't find the right name.
+
+    ansible_epel_repo_name: 'epel'
+
+if `ansible_install_method` is set to `package` and you are on a RHEL machine, and your local satellite server admins decided to name the epel repository something other than epel, this variable gives you the opportunity to provide the right name.
+
+
 ## Dependencies
 
 None.
