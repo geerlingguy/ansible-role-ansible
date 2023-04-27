@@ -14,4 +14,4 @@ ansible_install_pip_extra_args: ''
 ansible_pip_executable: ''
 
 # name of epel repo if it isn't standard
-ansible_epel_name: 'epel'
+ansible_epel_repo_name: 'epel'
