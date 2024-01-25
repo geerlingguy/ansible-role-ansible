@@ -19,12 +19,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: 'geerlingguy.ansible'
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
@@ -41,27 +41,25 @@ jobs:
     strategy:
       matrix:
         include:
-          - distro: rockylinux8
+          - distro: rockylinux9
             playbook: converge.yml
-          - distro: fedora33
+          - distro: fedora39
             playbook: converge.yml
-          - distro: ubuntu2004
+          - distro: ubuntu2204
             playbook: converge.yml
-          - distro: ubuntu1804
-            playbook: converge.yml
-          - distro: debian10
+          - distro: debian12
             playbook: converge.yml
           - distro: rockylinux8
             playbook: pip.yml
 
     steps:
       - name: Check out the codebase.
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           path: 'geerlingguy.ansible'
 
       - name: Set up Python 3.
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5
         with:
           python-version: '3.x'
 
