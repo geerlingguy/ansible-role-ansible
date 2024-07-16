@@ -50,7 +50,7 @@ Install from pip:
     - hosts: servers
       vars:
         ansible_install_method: pip
-        ansible_install_version_pip: "2.7.0"
+        ansible_install_version_pip: "9.6.1"
         ansible_install_pip_extra_args: "--user"
       roles:
         - role: geerlingguy.pip

@@ -49,7 +49,7 @@ jobs:
             playbook: converge.yml
           - distro: debian12
             playbook: converge.yml
-          - distro: rockylinux8
+          - distro: rockylinux9
             playbook: pip.yml
 
     steps:
