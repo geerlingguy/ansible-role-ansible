@@ -1,6 +1,6 @@
 # Ansible Role: Ansible
 
-[![CI](https://github.com/geerlingguy/ansible-role-ansible/workflows/CI/badge.svg?event=push)](https://github.com/geerlingguy/ansible-role-ansible/actions?query=workflow%3ACI)
+[![CI](https://github.com/geerlingguy/ansible-role-ansible/actions/workflows/ci.yml/badge.svg)](https://github.com/geerlingguy/ansible-role-ansible/actions/workflows/ci.yml)
 
 An Ansible Role that installs Ansible on Linux servers.
 
