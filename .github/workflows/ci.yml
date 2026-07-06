@@ -45,11 +45,7 @@ jobs:
             playbook: converge.yml
           - distro: fedora39
             playbook: converge.yml
-<<<<<<< Updated upstream
           - distro: ubuntu2204
-=======
-          - distro: ubuntu2004
->>>>>>> Stashed changes
             playbook: converge.yml
           - distro: debian12
             playbook: converge.yml
